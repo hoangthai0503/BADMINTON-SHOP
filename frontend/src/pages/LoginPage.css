@@ -1,0 +1,14 @@
+/* src/pages/LoginPage.css */
+
+.forgot-link {
+  color: #e8491d;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+  color: #c7390d;
+  text-decoration: underline;
+}

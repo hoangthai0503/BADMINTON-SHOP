@@ -1,0 +1,128 @@
+/* src/pages/CheckoutPage.css */
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.payment-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+  border-color: #3b82f6;
+  background-color: #f0f9ff;
+}
+
+.payment-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  cursor: pointer;
+  accent-color: #3b82f6;
+}
+
+.payment-option input[type="radio"]:checked + .payment-label {
+  color: #3b82f6;
+}
+
+.payment-option input[type="radio"]:checked {
+  accent-color: #3b82f6;
+}
+
+.payment-option:has(input[type="radio"]:checked) {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.payment-label {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+.payment-icon {
+  font-size: 24px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.payment-label div {
+  flex: 1;
+}
+
+.payment-title {
+  margin: 0 0 4px 0;
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+}
+
+.payment-option:has(input[type="radio"]:checked) .payment-title {
+  color: #3b82f6;
+}
+
+.payment-desc {
+  margin: 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* Bank Transfer Info */
+.bank-info {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #f8fafc;
+  border-left: 4px solid #0ea5e9;
+  border-radius: 6px;
+}
+
+.bank-info-title {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.bank-details {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.bank-details p {
+  margin: 6px 0;
+  word-break: break-word;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment-methods {
+    gap: 10px;
+  }
+
+  .payment-option {
+    padding: 12px;
+  }
+
+  .payment-icon {
+    font-size: 20px;
+  }
+
+  .payment-title {
+    font-size: 14px;
+  }
+
+  .payment-desc {
+    font-size: 12px;
+  }
+}
